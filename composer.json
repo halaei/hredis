@@ -1,0 +1,27 @@
+{
+  "name": "halaei/hredis",
+  "description": "New Redis queue driver for Laravel",
+  "keywords": ["Laravel", "Queue"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Hamid Alaei V.",
+      "email": "hamid@opilo.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "illuminate/queue": "5.2.*",
+    "predis/predis": "~1.0",
+    "illuminate/redis": "5.2.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0",
+    "mockery/mockery": "~0.9.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Halaei\\HRedis\\": "src/"
+    }
+  }
+}
