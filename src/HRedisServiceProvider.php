@@ -5,7 +5,7 @@ namespace Halaei\HRedis;
 use Illuminate\Queue\QueueManager;
 use Illuminate\Support\ServiceProvider;
 
-class RedisServiceProvider extends ServiceProvider
+class HRedisServiceProvider extends ServiceProvider
 {
     /**
      * Register the service provider.
@@ -20,7 +20,7 @@ class RedisServiceProvider extends ServiceProvider
     public function boot(QueueManager $queueManager)
     {
         $queueManager->addConnector('hredis', function() use ($queueManager) {
-            return new RedisConnector($queueManager);
+            return new RedisConnector($this->app['redis']);
         });
     }
 }
